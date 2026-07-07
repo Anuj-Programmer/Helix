@@ -16,6 +16,9 @@ import { toast } from "sonner";
   const testAi = useMutation(trpc.testAi.mutationOptions({
     onSuccess: () => {
       toast.success("AI Job Queued");
+    },
+    onError: () => {
+      toast.error("SOmething went wrong")
     }
   }))
 
