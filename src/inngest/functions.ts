@@ -11,8 +11,12 @@ const openai = createOpenAI();
 const anthropic = createAnthropic();
 
 export const execute = inngest.createFunction(
-    {id: "execute"},
-    {event: "execute/ai"},
+    {id: "execute",
+    triggers: {
+            event: "execute/ai",
+        },
+    },
+    
     async({event, step}) => {
         await step.sleep("pretend", "5s");
         

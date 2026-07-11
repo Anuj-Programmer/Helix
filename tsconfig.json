@@ -22,10 +22,10 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": [
+   "include": [
     "next-env.d.ts", 
-    "src/**/*.ts", 
-    "src/**/*.tsx", 
+    "**/*.ts",       // Changed from src/**/*.ts to catch all directories
+    "**/*.tsx",      // Changed from src/**/*.tsx to catch all directories
     ".next/types/**/*.ts"
   ],
   "exclude": [
